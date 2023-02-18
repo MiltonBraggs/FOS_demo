@@ -11,7 +11,7 @@ function navigateTo(route) {
 async function router() {
   const routes = [
     { path: "/", view: Home },
-    { path: "/about", view: About},
+    { path: "/about", view: About },
     { path: "/posts/{slug}", view: Post },
   ];
 
@@ -26,8 +26,6 @@ async function router() {
     route,
     result: location.pathname.match(pathToRegex(route.path)),
   }));
-
-  console.log(potentialMatches);
 
   const match = potentialMatches.find(
     (potentialMatch) => potentialMatch.result !== null
@@ -49,11 +47,11 @@ window.addEventListener("popstate", router);
 
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (e) => {
-    if (e.target.matches("[data-link]")) {
+    const anchor = e.target.closest("[data-link]");
+    if (anchor) {
       e.preventDefault();
-      navigateTo(e.target.href);
+      navigateTo(anchor);
     }
   });
-
   router();
 });
