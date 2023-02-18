@@ -1,5 +1,6 @@
 import Home from "./components/Home.js";
 import Post from "./components/Post.js";
+import About from "./components/About.js";
 import NotFound from "./components/NotFound.js";
 
 function navigateTo(route) {
@@ -10,6 +11,7 @@ function navigateTo(route) {
 async function router() {
   const routes = [
     { path: "/", view: Home },
+    { path: "/about", view: About},
     { path: "/posts/{slug}", view: Post },
   ];
 
