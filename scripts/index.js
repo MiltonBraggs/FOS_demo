@@ -16,11 +16,7 @@ async function router() {
   ];
 
   const pathToRegex = (path) =>
-    path.startsWith("/posts/")
-      ? new RegExp(`^\\/posts\\/(.+)$`)
-      : new RegExp(
-          `^${path.replace(/\//g, "\\/").replace(/-\{(.+?)\}/g, "-(.+)")}$`
-        );
+    new RegExp(`^${path.replace(/\//g, "\\/").replace(/\{(.+?)\}/g, "(.+)")}$`);
 
   const potentialMatches = routes.map((route) => ({
     route,
