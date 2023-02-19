@@ -3,7 +3,7 @@ import AbstractView from "./AbstractView.js";
 export default class extends AbstractView {
   constructor(params) {
     super(params);
-    this.lastSlug = params.lastSlug
+    this.lastSlug = params.lastSlug;
     this.setTitle(this.lastSlug);
   }
 
@@ -14,13 +14,18 @@ export default class extends AbstractView {
       .join(" ");
   }
 
+  async get404() {
+    this.setTitle("Page not found");
+    const response = await fetch("/pages/404.html");
+    return await response.text();
+  }
+
   async getHtml() {
-    try {
-      const response = await fetch(`/pages/posts/${this.lastSlug}.html`);
+    const response = await fetch(`/pages/posts/${this.lastSlug}.html`);
+    if (response.status === 200) {
       return await response.text();
-    } catch (_error) {
-      const response = await fetch(`/pages/404.html`);
-      return await response.text();
+    } else {
+      return await this.get404();
     }
   }
 }
