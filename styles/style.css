@@ -10,7 +10,7 @@
 li, a {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     color: #edf0f1;
     text-decoration: none;
 }
@@ -64,6 +64,7 @@ header {
   grid-gap: 50px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 5px));
   align-items: center;
+  margin-left: 10%;
 }
 
 .grid-item {
@@ -102,7 +103,7 @@ header {
   letter-spacing: 0.1rem;
   line-height: 1.7;
   color: #ffffff;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .card-btn {
@@ -144,4 +145,51 @@ header {
   .grid {
     grid-gap: 3rem;
   }
+}
+
+/*To allign the cards*/
+.card-text-benefits {
+  font-size: 15px;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: #ffffff;     
+  margin-bottom: 19px;
+}
+
+.card-text-history {
+  font-size: 15px;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: #ffffff;
+  margin-bottom: 39px;
+}
+
+.card-text-alternatives {
+  font-size: 15px;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: #ffffff;
+  margin-bottom: 4.5px;
+}
+
+.card-text-GNU {
+  font-size: 15px;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+/**/
+
+.home{
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 65px;
+    
+}
+
+footer{
+  color:white;
+  margin: 20px;
 }
