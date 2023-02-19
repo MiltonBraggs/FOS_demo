@@ -10,16 +10,17 @@
 li, a {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 125%;
     color: #edf0f1;
     text-decoration: none;
+    
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 20px 10%;
 
 }
 
@@ -27,7 +28,7 @@ header {
     border: 10px;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 300%;
     color: #edf0f1;
     text-decoration: none;
     cursor: pointer;
@@ -203,7 +204,7 @@ footer{
 }
 
 .post-text {
-  font-size:30px;
+  font-size:25px;
   color:white;
   margin:20px 10%;
 }
@@ -212,4 +213,20 @@ footer{
   margin:20px 0;
   margin-right:20px;
   margin-left:10%;
+}
+
+/*Style benefits of FOSS*/
+.benefits h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  color:white;
+  margin-left:10%;
+}
+
+.benefits iframe {
+  margin-left: 30%;
+}
+
+.iframe-benefits{
+  margin-right: auto;
 }
