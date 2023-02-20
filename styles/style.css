@@ -205,9 +205,11 @@ footer{
 }
 
 .post-text {
+  font-family: sans-serif;
   font-size:25px;
   color:white;
   margin:20px 10%;
+  letter-spacing: 2px;
 }
 
 .post-img-1 {
