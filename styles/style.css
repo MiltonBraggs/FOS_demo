@@ -193,6 +193,7 @@ header {
 footer{
   color:white;
   margin: 50px;
+  clear:both;
 }
 
 /*Style posts:*/
