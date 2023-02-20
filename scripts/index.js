@@ -49,5 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
       navigateTo(anchor);
     }
   });
-  router();
+
+  navigateTo('/')
 });
