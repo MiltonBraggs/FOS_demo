@@ -34,6 +34,8 @@ header {
     cursor: pointer;
 }
 
+
+
 .nav_links {
     list-style: none;
 
@@ -79,7 +81,7 @@ header {
 
 .grid-item:hover {
   transform: translateY(-0.5%);
-  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4rem 8rem rgb(0, 0, 0);
 }
 
 .card-img {
@@ -242,3 +244,4 @@ footer{
   margin-left:10%;
   width:600px;
 }
+
