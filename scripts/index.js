@@ -3,10 +3,19 @@ import Post from "./components/Post.js";
 import About from "./components/About.js";
 import NotFound from "./components/NotFound.js";
 
-function navigateTo(route) {
-  history.pushState(null, "", route);
-  router();
-}
+window.addEventListener("popstate", router);
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("click", (e) => {
+    const anchor = e.target.closest("[data-link]");
+    if (anchor) {
+      e.preventDefault();
+      navigateTo(anchor);
+    }
+  });
+
+  navigateTo('/')
+});
 
 async function router() {
   const routes = [
@@ -39,16 +48,7 @@ async function router() {
   document.querySelector("#app").innerHTML = await page.getHtml();
 }
 
-window.addEventListener("popstate", router);
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.addEventListener("click", (e) => {
-    const anchor = e.target.closest("[data-link]");
-    if (anchor) {
-      e.preventDefault();
-      navigateTo(anchor);
-    }
-  });
-
-  navigateTo('/')
-});
+function navigateTo(route) {
+  history.pushState(null, "", route);
+  router();
+}
